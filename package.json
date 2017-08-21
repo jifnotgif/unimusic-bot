@@ -1,0 +1,11 @@
+{
+  "name": "uni-music bot",
+  "main": "index.js",
+  "dependencies": {
+    "async": "^2.5.0",
+    "extend": "^3.0.1",
+    "opusscript": "0.0.3",
+    "xhr": "^2.4.0",
+    "ytdl-core": "^0.15.2"
+  }
+}
