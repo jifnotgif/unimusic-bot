@@ -1,2 +1,2 @@
 # unimusic-bot
-discord js api bot for music playing
+A bot made using Discord.js API that functions as a music player in the Discord application.
