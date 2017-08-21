@@ -8,9 +8,9 @@ exports.run = (client, message) => {
     "**!randomcoin** - flips a coin \n"+
     "**!rng** - generates a random number 1 - 100 \n"+
     "**!botinfo** - displays information about uni-music bot \n"+
-    "**!userstats** - provides stats about the user \n"+
+    "**!userstats** - provides stats about the user "
     , true)
-    .addField("Music Commands WORK IN PROGRESS",
+    .addField("Music Commands",
     "**!add** ***(youtube URL/song title)*** - adds song to queue \n" +
     "**!play** - plays songs in queue \n"+
     "**!skip** - skips currently playing song \n"+
@@ -22,7 +22,7 @@ exports.run = (client, message) => {
     "**!remove** ***(song index)*** - removes song from specified position in queue \n"+
     "**!move** ***(old index) (new index)*** - moves song from selected position to new position in queue, if no new index defaults to next song \n"+
     "**!shuffle** - shuffles queue \n"+
-    "**!volume (0-200)** - sets the volume of bot"
+    "**!volume (0-200)** - sets the volume of bot",
     true)
     message.channel.send({embed:embed});
 };
