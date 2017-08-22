@@ -2,7 +2,7 @@ const search = require('youtube-search');
 const ypi = require('youtube-playlist-info');
 const opts = {
   maxResults: 3,
-  key: 'AIzaSyBBdtiejmGaTZpHBMN6sfQkWQQw2rftjwE'
+  key: ''
 };
 const servers = require('../index.js').servers;
 exports.run = (client, message, addSongParam) => {
@@ -18,7 +18,7 @@ exports.run = (client, message, addSongParam) => {
     if(results[0].kind === 'youtube#video') server.queue.push({title:results[0].title, link:results[0].link, description:results[0].description, thumbnail:results[0].thumbnails.default, requester:message.author});
     if(results[0].kind === 'youtube#playlist') {
       playlistID = results[0].link.substring('https://www.youtube.com/playlist?list='.length);
-      ypi.playlistInfo("AIzaSyBBdtiejmGaTZpHBMN6sfQkWQQw2rftjwE", playlistID, function(playlistItems) {
+      ypi.playlistInfo("", playlistID, function(playlistItems) {
         for(i =0; i<playlistItems.length;i++){
           if(playlistItems[i].description.length>168){
             playlistItems[i].description = playlistItems[i].description.substring(0,168) +"...";
