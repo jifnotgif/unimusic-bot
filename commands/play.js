@@ -14,9 +14,6 @@ function play(connection, message){
   message.channel.send({embed:songEmbed});
   server.currentSongInfo.push({title:server.queue[0].title});
   server.dispatcher = connection.playStream(ytdl(server.queue[0].link, {filter: "audioonly"}));
-  if(autoMode){
-    server.queue.push(server.queue[0]);
-  }
   server.queue.shift();
   server.dispatcher.on("end", ()=>{
     if (server.queue[0]){

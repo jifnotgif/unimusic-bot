@@ -4,8 +4,8 @@ exports.run = (client,message) => {
     try{
       if(server.dispatcher) {
         message.channel.send(":fast_forward: " +server.currentSongInfo[0].title + " has been skipped");
-        if(!server.queue[0]) server.currentSongInfo.shift();
         server.dispatcher.end();
+
       }
     }
     catch(err){

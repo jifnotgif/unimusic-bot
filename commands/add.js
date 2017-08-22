@@ -6,8 +6,6 @@ const opts = {
 };
 const servers = require('../index.js').servers;
 exports.run = (client, message, addSongParam) => {
-  //var server = servers[message.guild.id] = {queue:[],currentSongInfo:[]};
-  //var server[message.guild.id] = {queue:[],currentSongInfo[]} ;
  if(!servers[message.guild.id]) servers[message.guild.id] ={queue:[],currentSongInfo:[]};
  var server = servers[message.guild.id];
   if(!addSongParam){
@@ -15,8 +13,6 @@ exports.run = (client, message, addSongParam) => {
     return;
   }
 
-
-  //var searchInput = message.content.substring("!add ".length);
   search(addSongParam,opts,(err,results)=>{
     if(err) console.log(err);
     if(results[0].kind === 'youtube#video') server.queue.push({title:results[0].title, link:results[0].link, description:results[0].description, thumbnail:results[0].thumbnails.default, requester:message.author});

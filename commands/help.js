@@ -10,7 +10,7 @@ exports.run = (client, message) => {
     "**!botinfo** - displays information about uni-music bot \n"+
     "**!userstats** - provides stats about the user "
     , true)
-    .addField("Music Commands",
+    .addField("Music Commands WORK IN PROGRESS",
     "**!add** ***(youtube URL/song title)*** - adds song to queue \n" +
     "**!play** - plays songs in queue \n"+
     "**!skip** - skips currently playing song \n"+

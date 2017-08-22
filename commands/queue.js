@@ -6,7 +6,7 @@ exports.run = (client, message, params) => {
   try{
     for (i =0; i< server.queue.length; i++){
       if (responses[pageNum].length > 1850) {
-        createNewResponse(responses);
+        responses.push("");
         pageNum++;
       }
         responses[pageNum] += (i+1)+". "+ server.queue[i].title + " - requested by " + server.queue[i].requester+"\n";
